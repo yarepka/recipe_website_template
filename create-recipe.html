@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Website</title>
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- Logo -->
+    <a href="/index.html">
+      <i class="logo fas fa-seedling"></i><span>Recipes</span> <span class="app">App</span>
+    </a>
+
+    <ul>
+      <li><a href="/recipes.html" class="btn">Recipes</a></li>
+      <li><a href="/login.html" class="btn">Log In</a></li>
+      <li><a href="/register.html" class="btn">Register</a></li>
+    </ul>
+  </nav>
+
+  <section class="container">
+    <h1 class="text-large text-success text-center">Share Your Recipe</h1>
+    <form class="create-recipe-form">
+      <div class="inputs">
+        <div class="inputs-left">
+          <div class="form-group">
+            <label for="file-upload" class="file-upload-label">
+              <span>Recipe Image</span>
+            </label>
+
+            <input id="file-upload" type="file" />
+          </div>
+
+          <div class="form-group form-group-flex">
+            <div>
+              <label>Prep time</label>
+              <input type="text" />
+            </div>
+
+            <div>
+              <label>Cook time</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="form-group form-group-flex">
+            <div>
+              <label>
+                Ready in <span class="optional">(Optional)</span>
+              </label>
+
+              <input type="text" />
+            </div>
+
+            <div>
+              <label>Cook time</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <button class="btn btn-success">Save</button>
+          <a class="btn text-center">Cancel</a>
+        </div>
+
+        <div class="inputs-right">
+          <div class="form-group">
+            <label>Recipe title</label>
+            <input type="text" />
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+            <textarea rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Ingredients</label>
+            <textarea rows="4" placeholder="Put each ingredient on it's own line"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Directions</label>
+            <textarea rows="4" placeholder="Put each step on its own line"></textarea>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </section>
+
+</body>
+
+</html>
