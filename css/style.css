@@ -24,6 +24,7 @@ body {
 }
 
 a{
+  display: inline-block;
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -46,6 +47,9 @@ textarea {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
+  background-color: #fafafa;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .alert {
@@ -56,6 +60,7 @@ textarea {
   color: var(--dark-color);
 }
 
+
 .alert-success {
   background: var(--success-color);
   color: #fff;
@@ -64,6 +69,11 @@ textarea {
 .alert-danger {
   background: var(--danger-color);
   color: #fff;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: #aaa;
 }
 
 .btn {
@@ -90,6 +100,10 @@ textarea {
 .btn-danger {
   color: #fff;
   background-color: var(--danger-color);
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 .logo {
@@ -140,6 +154,7 @@ input, textarea {
 .form-group label, .form-group input, .form-group textarea {
   display: block;
   width: 100%;
+  font-weight: 600;
 }
 
 .card {
@@ -171,6 +186,17 @@ input, textarea {
   height: 2px;
   background-color: #333;
   margin: 2rem 0;
+}
+
+.line-small {
+  width: 100px;
+  height: 3px;
+  background-color: var(--dark-color);
+  margin: 4rem auto;
+}
+
+.bg-white {
+  background: #fff;
 }
 
 /* Landing Page */
@@ -285,6 +311,7 @@ input, textarea {
   background: url('https://images.media-allrecipes.com/ar-images/icons/pic-icon-gray.svg') no-repeat center center;
   background-size: 80px 80px;
   margin-bottom: 1rem;
+  background-color: #fff;
 }
 
 .file-upload-label span {
@@ -311,10 +338,101 @@ input, textarea {
   margin: 1.8rem 0;
 }
 
+/* Recipes page */
+.recipe {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.recipe-img {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  align-self: center;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add-to-favorite {
+  background: #ffc107;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.time-and-portions {
+  display: inline-block
+}
+
+.recipe-description {
+  text-align: justify;
+}
+
+.recipe-portions {
+  margin-right: 1rem;
+}
+
+.recipe-portions, .recipe-time {
+  display: inline-block;
+}
+
+.recipe-portions i, .recipe-time i {
+  background-color: var(--success-color);
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.recipe .number {
+  font-weight: 700;
+}
+
+.recipe .buttons {
+  display: flex;
+}
+
 @media(max-width: 1200px) {
   .inputs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 800px) {
+  .recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .recipe {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+
+  .recipe-img {
+    justify-self: center;
+  }
+
+  .recipe .head h2, .recipe .author {
+    text-align: center;
+  }
+
+  .recipe div {
+    text-align: center;
+  }
+
+  .recipe .buttons {
+    justify-content: center;
   }
 }
 
@@ -370,10 +488,13 @@ input, textarea {
   .lead {
     margin: 1rem 0 0 0;
   }
-
 }
 
 @media(max-width: 500px) {
+  .container {
+    background: #fff;
+  }
+  
   .landing-heading {
     font-size: 2.5rem;
     
@@ -394,7 +515,33 @@ input, textarea {
   .register-form .form-group {
     margin: 0.8rem 0;
   }
+
+  .block-on-mobile {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }  
+
+  .recipe .buttons {
+    flex-direction: column
+  }
+
+  .recipe .likes-and-dislikes {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+  }
+
+  .recipe .likes-and-dislikes button {
+    width: 48%;
+  }
+
+  .recipe .add-to-favorite {
+    width: 100%;
+    margin-left: 0;
+  }
 }
+
 
 @media(max-width: 300px) {
   .landing-heading {
@@ -433,9 +580,33 @@ input, textarea {
     font-size: 1.3rem;
   }
 
-  small {
-    font-size: 0.7rem;
+  .block-on-mobile {
+    width: 100%;
+    display: block;
+    text-align: center;
   }
+
+  .recipe-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .recipe-portions {
+    margin-right: 0;
+  }
+
+  .recipe div:not(:last-child) {
+    text-align: left;
+  }
+
+  .recipe-portions {
+    margin-bottom: 10px;
+  }
+
+  .recipe-description {
+    text-align: center;
+  }
+
 }
 
 @media(max-height: 590px) {
