@@ -31,10 +31,24 @@
 
       <div class="single-recipe-content">
         <div class="time-info">
-          <p><i class="fas fa-stopwatch"></i><span><strong>Prep: </strong> 10 mins</span></p>
-          <p><i class="far fa-clock"></i><span><strong>Cook: </strong> 30 mins</span></p>
-          <p><i class="fas fa-smile"></i><span></i><strong>Servings: </strong> 4</span></p>
+          <p class="hide-on-pad"><i class="fas fa-stopwatch"></i><span><strong>Prep: </strong> 10 mins</span></p>
+          <p class="hide-on-pad"><i class="far fa-clock"></i><span><strong>Cook: </strong> 30 mins</span></p>
+          <p class="hide-on-mobile"><i class="fas fa-smile"></i><span></i><strong>Servings: </strong> 4</span></p>
+          <p class="show-on-pad"><i class="far fa-clock"></i><span><strong>Cook: </strong> 30 mins</span></p>
         </div>
+
+        <div class="single-recipe-rating">
+          <a href="like">
+            <i class="fas fa-thumbs-up"></i><span class="single-comment-likes">25</span>
+          </a>
+
+          <a href="dislike">
+            <i class="fas fa-thumbs-down"></i><span class="single-comment-likes">3</span>
+          </a>
+
+        </div>
+
+        <div class="line-small"></div>
 
         <img src="./img/food/food_1.jpeg" alt="recipe-image">
 
@@ -131,6 +145,80 @@
       </div>
     </div>
 
+    <!-- Comments -->
+    <div class="comments">
+      <div class="comment">
+        <div class="comment-top">
+          <div class="comment-author">
+            <div class="comment-author-image" style="background-image:url('./img/food/food_1.jpeg')"></div>
+
+            <div class="name-and-date">
+              <span class="comment-author-name">John Doe</span>
+              <span class="comment-date">29.07.2020</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="comment-content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, eos corporis perspiciatis dolore
+            facilis mollitia architecto ipsa ipsam nemo corrupti?</p>
+        </div>
+      </div>
+
+
+      <div class="comment">
+        <div class="comment-top">
+          <div class="comment-author">
+            <div class="comment-author-image" style="background-image:url('./img/food/food_4.jpeg')"></div>
+
+            <div class="name-and-date">
+              <span class="comment-author-name">John Doe</span>
+              <span class="comment-date">14.06.2020</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="comment-content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium dolores natus sapiente
+            obcaecati itaque, deleniti hic voluptates odit suscipit consectetur dolore similique harum recusandae enim
+            deserunt quos accusantium neque, et architecto porro eum dolor ipsam! Blanditiis eligendi maiores porro quo
+            eius eaque eveniet! Necessitatibus cupiditate, temporibus aspernatur debitis deserunt iste adipisci ducimus
+            sit animi, ab quo cumque alias expedita.</p>
+        </div>
+      </div>
+
+
+      <div class="comment">
+        <div class="comment-top">
+          <div class="comment-author">
+            <div class="comment-author-image" style="background-image:url('./img/food/food_6.jpeg')"></div>
+
+            <div class="name-and-date">
+              <span class="comment-author-name">John Doe</span>
+              <span class="comment-date">05.05.2020</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="comment-content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tenetur magni culpa eaque enim neque
+            recusandae facilis nisi praesentium commodi consequuntur fuga, hic impedit illo architecto eos corporis
+            doloribus est quibusdam aut animi iste debitis ut cupiditate? Incidunt tempora dolore illum, quis quia
+            corporis adipisci magnam ipsam sunt? Voluptatem, repellat, quisquam itaque dolore animi repellendus
+            necessitatibus commodi, dolorem mollitia rerum ipsum omnis doloribus. Ratione, placeat omnis exercitationem
+            quis aspernatur quisquam ducimus nisi expedita, quo minus autem. Sint, ad laudantium iure exercitationem
+            sit, maiores totam voluptatem odio natus debitis praesentium dolorem doloremque reiciendis corporis
+            voluptate, itaque expedita! Sed dolorum nulla ipsum?</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Add new comment -->
+    <form class="add-comment-form">
+      <textarea cols="30" rows="5" placeholder="Add new comment"></textarea>
+      <button class="btn">send</button>
+    </form>
   </section>
 
 </body>
